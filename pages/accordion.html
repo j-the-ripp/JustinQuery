@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <style>
+      /* Background image for the entire page */
+      body {
+            background-image: url('/Images/Wallpaper1.avif'); /* Replace with your image path */
+            background-size: cover; /* Make the image cover the entire page */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            background-attachment: fixed; /* Keeps the image fixed when scrolling */
+            background-position: center; /* Center the background image */
+            color: #fff; /* Optional: Set text color to be more visible over the background */
+            
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for the header */
+            padding: 15px 20px;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            font-size: 36px; /* Adjust icon size */
+            color: #fff; /* Icon color */
+            margin-right: 10px; /* Space between icon and text */
+        }
+        .header-name {
+            font-size: 28px;
+            font-weight: 500;
+            margin: 0;
+        }
+      #accordion h3 {
+        background-color: initial; 
+        color: black; 
+        margin-right: 50px;
+      }
+      #accordion div {
+        margin-right: 50px;
+      }
+      #accordion .ui-state-active {
+        background-color: #000000;
+        color: white;
+      }
+      section {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+    </style>
+</head>
+<body>
+    <header>
+      <div class="header-container">
+        <span class="material-icons logo-icon">widgets</span>
+        <h1 class="header-name">WIDGETS</h1>
+    </div>
+    </header>
+    <section>
+        <nav>
+            <ul><li><a href="../index.html">Home</a></li></ul>
+            <ul><li><a href="accordion.html" style="color: #fff;">Accordion</a></li></ul>
+            <ul><li><a href="autocomplete.html">Auto Complete</a></li></ul>
+            <ul><li><a href="button.html">Buttons</a></li></ul>
+            <ul><li><a href="checkbox.html">CheckBox Radio</a></li></ul>
+            <ul><li><a href="controlgroup.html">Control Group</a></li></ul>
+            <ul><li><a href="datepicker.html">Date</a></li></ul>
+            <ul><li><a href="dialog.html">Dialog</a></li></ul>
+            <ul><li><a href="menu.html">Menu</a></li></ul>
+            
+        </nav>
+        <article>
+            <h1>Accordion</h1>
+            <div id="accordion">
+                <h3>Section 1</h3>
+                <div>
+                  <p>
+                  Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                  ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                  amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                  odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                  </p>
+                </div>
+                <h3>Section 2</h3>
+                <div>
+                  <p>
+                  Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                  purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                  velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                  suscipit faucibus urna.
+                  </p>
+                </div>
+                <h3>Section 3</h3>
+                <div>
+                  <p>
+                  Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                  Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                  ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                  lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                  </p>
+                  <ul>
+                    <li>List item 1</li>
+                    <li>List item 2</li>
+                    <li>List item 3</li>
+                  </ul>
+                </div>
+                <h3>Section 4</h3>
+                <div>
+                  <p>
+                  Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+                  et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+                  faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+                  mauris vel est.
+                  </p>
+                  <p>
+                  Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+                  Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                  inceptos himenaeos.
+                  </p>
+                </div>
+              </div>
+        </article>
+    </section>
+    <footer>
+      <img src="/Images/msc-footer-gate.png" alt="Footer Icon" style="width: 100px; height: auto;">
+      <style>
+          footer img {
+          width: 100px; /* Adjust the size as needed */
+          height: auto;
+          margin-top: 10px;
+      }
+      </style> 
+      <p>Justine Palomares &copy; 2024</p> 
+  </footer>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            $( "#accordion" ).accordion();
+        });
+    </script>
+</body>
+</html>

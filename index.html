@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        body {
+            background-image: url('./Images/Wallpaper1.avif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            font-size: 36px;
+            color: #fff;
+            margin-right: 10px;
+        }
+
+        .header-name {
+            font-size: 28px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .settings-button {
+            position: relative;
+        }
+
+        .settings-icon {
+            font-size: 28px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            padding: 10px;
+            width: 150px;
+            top: 40px;
+            z-index: 1;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #333;
+        }
+
+        button {
+            background-color: #000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-align: left;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .button-container {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        footer img {
+            width: 100px;
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <span class="material-icons logo-icon">widgets</span>
+            <h1 class="header-name">WIDGETS</h1>
+        </div>
+        <div class="settings-button">
+            <span class="material-icons settings-icon" onclick="toggleDropdown()">settings</span>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="#">Profile</a>
+                <a href="#">Theme</a>
+                <a href="#">Account</a>
+                <a href="#">Settings</a>
+            </div>
+        </div>
+    </header>
+    <section>
+        <nav>
+            <!-- Sidebar menu -->
+            <ul><li><a href="index.html" style="color: #fff;">Home</a></li></ul>
+            <ul><li><a href="pages/accordion.html">Accordion</a></li></ul>
+            <ul><li><a href="pages/autocomplete.html">Auto Complete</a></li></ul>
+            <ul><li><a href="pages/button.html">Buttons</a></li></ul>
+            <ul><li><a href="pages/checkbox.html">CheckBox Radio</a></li></ul>
+            <ul><li><a href="pages/controlgroup.html">Control Group</a></li></ul>
+            <ul><li><a href="pages/datepicker.html">Date</a></li></ul>
+            <ul><li><a href="pages/dialog.html">Dialog</a></li></ul>
+            <ul><li><a href="pages/menu.html">Menu</a></li></ul>
+        </nav>
+        <article>
+            <h1>Home</h1>
+            <div class="row">
+                <div class="col-2">
+                    <div class="button-container">
+                        <button id="idbutton">ID</button>
+                        <button class="classbutton">Class</button>
+                        <button id="Information">Show</button>
+                        <button id="hideInfo">Hide</button>
+                    </div>
+                    <video id="videoPlayer" style="display:none; width: 640px; height: 360px;" controls>
+                        <source src="./Videos/ssi.mp3juice.blog - Realest Cram - Dikapamigay feat. ENZO MF (Official Music Video).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <img src="./Images/msc-footer-gate.png" alt="Footer Icon">
+        <p>Justine Palomares &copy; 2024</p> 
+    </footer>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById("dropdownMenu");
+            dropdown.style.display = dropdown.style.display === "none" || dropdown.style.display === "" ? "block" : "none";
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.settings-icon')) {
+                const dropdown = document.getElementById("dropdownMenu");
+                if (dropdown.style.display === "block") {
+                    dropdown.style.display = "none";
+                }
+            }
+        };
+
+        $(document).ready(function(){
+            $("#idbutton").click(function(){
+                alert("ID Button was clicked");
+            });
+
+            $(".classbutton").click(function(){
+                alert("Class Button was clicked");
+            });
+
+            $("#Information").click(function(){
+                $("#videoPlayer").show();
+                $("#videoPlayer")[0].play();
+            });
+
+            $("#hideInfo").click(function(){
+                $("#videoPlayer").hide();
+                $("#videoPlayer")[0].pause();
+            });
+        });
+    </script>
+</body>
+</html>

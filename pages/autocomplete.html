@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+</head>
+<style>
+    /* Background image for the entire page */
+    body {
+            background-image: url('/Images/Wallpaper1.avif'); /* Replace with your image path */
+            background-size: cover; /* Make the image cover the entire page */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            background-attachment: fixed; /* Keeps the image fixed when scrolling */
+            background-position: center; /* Center the background image */
+            color: #fff; /* Optional: Set text color to be more visible over the background */
+            
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for the header */
+            padding: 15px 20px;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            font-size: 36px; /* Adjust icon size */
+            color: #fff; /* Icon color */
+            margin-right: 10px; /* Space between icon and text */
+        }
+        .header-name {
+            font-size: 28px;
+            font-weight: 500;
+            margin: 0;
+        }
+</style>
+<body>
+    <header>
+        <div class="header-container">
+            <span class="material-icons logo-icon">widgets</span>
+            <h1 class="header-name">WIDGETS</h1>
+        </div>
+    </header>
+    <section>
+        <nav>
+            <ul><li><a href="../index.html">Home</a></li></ul>
+            <ul><li><a href="accordion.html">Accordion</a></li></ul>
+            <ul><li><a href="autocomplete.html" style="color: #fff;">Auto Complete</a></li></ul>
+            <ul><li><a href="button.html">Buttons</a></li></ul>
+            <ul><li><a href="checkbox.html">CheckBox Radio</a></li></ul>
+            <ul><li><a href="controlgroup.html">Control Group</a></li></ul>
+            <ul><li><a href="datepicker.html">Date</a></li></ul>
+            <ul><li><a href="dialog.html">Dialog</a></li></ul>
+            <ul><li><a href="menu.html">Menu</a></li></ul>
+            
+        </nav>
+        <article>
+            <h1>Auto Complete</h1>
+            <div class="ui-widget">
+                <label for="tags">Tags: </label>
+                <input id="tags">
+                <button id="submitButton">Enter</button>
+            </div>
+            <div id="result" style="margin-top: 20px; font-weight: bold; color: #133E87;"></div>
+        </article>
+    </section>
+    <footer>
+        <img src="/Images/msc-footer-gate.png" alt="Footer Icon" style="width: 100px; height: auto;">
+        <style>
+            footer img {
+            width: 100px; /* Adjust the size as needed */
+            height: auto;
+            margin-top: 10px;
+        }
+        </style> 
+        <p>Justine Palomares &copy; 2024</p> 
+    </footer>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            var availableTags = [
+                "ActionScript",
+                "AppleScript", 
+                "Asp", 
+                "BASIC", 
+                "C", 
+                "C++", 
+                "Clojure",
+                "COBOL", 
+                "ColdFusion", 
+                "Erlang", 
+                "Fortran", 
+                "Groovy", 
+                "Haskell",
+                "Java", 
+                "JavaScript", 
+                "Lisp", 
+                "Perl", 
+                "PHP", 
+                "Python", 
+                "Ruby",
+                "Scala", 
+                "Scheme"
+            ];
+            $("#tags").autocomplete({
+                source: availableTags
+            });
+
+            $("#submitButton").click(function() {
+                var searchValue = $("#tags").val();
+                if (searchValue) {
+                    $("#result").text("You searched for: " + searchValue);
+                } else {
+                    alert("Please enter a search term.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

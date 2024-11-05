@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+      /* Background image for the entire page */
+      body {
+            background-image: url('/Images/Wallpaper1.avif'); /* Replace with your image path */
+            background-size: cover; /* Make the image cover the entire page */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            background-attachment: fixed; /* Keeps the image fixed when scrolling */
+            background-position: center; /* Center the background image */
+            color: #fff; /* Optional: Set text color to be more visible over the background */
+            
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for the header */
+            padding: 15px 20px;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            font-size: 36px; /* Adjust icon size */
+            color: #fff; /* Icon color */
+            margin-right: 10px; /* Space between icon and text */
+        }
+        .header-name {
+            font-size: 28px;
+            font-weight: 500;
+            margin: 0;
+        }
+        .ui-controlgroup-vertical {
+          width: 150px;
+        }
+        .ui-controlgroup.ui-controlgroup-vertical > button.ui-button,
+        .ui-controlgroup.ui-controlgroup-vertical > .ui-controlgroup-label {
+          text-align: center;
+        }
+        #car-type-button {
+          width: 120px;
+        }
+        .ui-controlgroup-horizontal .ui-spinner-input {
+          width: 20px;
+        }
+        fieldset{
+          width:fit-content;
+        }
+      </style>
+</head>
+<body>
+    <header>
+      <div class="header-container">
+        <span class="material-icons logo-icon">widgets</span>
+        <h1 class="header-name">WIDGETS</h1>
+    </div>
+    </header>
+    <section>
+        <nav>
+            <ul><li><a href="../index.html">Home</a></li></ul>
+            <ul><li><a href="accordion.html">Accordion</a></li></ul>
+            <ul><li><a href="autocomplete.html">Auto Complete</a></li></ul>
+            <ul><li><a href="button.html">Buttons</a></li></ul>
+            <ul><li><a href="checkbox.html">CheckBox Radio</a></li></ul>
+            <ul><li><a href="controlgroup.html" style="color: #fff;">Control Group</a></li></ul>
+            <ul><li><a href="datepicker.html">Date</a></li></ul>
+            <ul><li><a href="dialog.html">Date</a></li></ul>
+            <ul><li><a href="menu.html">Menu</a></li></ul>
+         
+        </nav>
+        <article>
+            <h1>Control Group</h1>
+            <div class="widget">
+                <h1>Control group</h1>
+                <fieldset>
+                  <legend>Rental Car</legend>
+                  <div class="controlgroup">
+                    <select id="car-type">
+                      <option>Compact car</option>
+                      <option>Midsize car</option>
+                      <option>Full size car</option>
+                      <option>SUV</option>
+                      <option>Luxury</option>
+                      <option>Truck</option>
+                      <option>Van</option>
+                    </select>
+                    <label for="transmission-standard">Standard</label>
+                    <input type="radio" name="transmission" id="transmission-standard">
+                    <label for="transmission-automatic">Automatic</label>
+                    <input type="radio" name="transmission" id="transmission-automatic">
+                    <label for="insurance">Insurance</label>
+                    <input type="checkbox" name="insurance" id="insurance">
+                    <label for="horizontal-spinner" class="ui-controlgroup-label"># of cars</label>
+                    <input id="horizontal-spinner" class="ui-spinner-input">
+                    <button>Book Now!</button>
+                  </div>
+                </fieldset>
+                <br>
+                <fieldset>
+                  <legend>Rental Car</legend>
+                  <div class="controlgroup-vertical">
+                    <select>
+                      <option>Compact car</option>
+                      <option>Midsize car</option>
+                      <option>Full size car</option>
+                      <option>SUV</option>
+                      <option>Luxury</option>
+                      <option>Truck</option>
+                      <option>Van</option>
+                    </select>
+                    <label for="transmission-standard-v">Standard</label>
+                    <input type="radio" name="transmission-v" id="transmission-standard-v">
+                    <label for="transmission-automatic-v">Automatic</label>
+                    <input type="radio" name="transmission-v" id="transmission-automatic-v">
+                    <label for="insurance-v">Insurance</label>
+                    <input type="checkbox" name="insurance" id="insurance-v">
+                    <label for="vertical-spinner" class="ui-controlgroup-label"># of cars</label>
+                    <input id="vertical-spinner" class="ui-spinner-input">
+                    <button id="book">Book Now!</button>
+                  </div>
+                </fieldset>
+              </div>
+        </article>
+    </section>
+    <footer>
+      <img src="/Images/msc-footer-gate.png" alt="Footer Icon" style="width: 100px; height: auto;">
+      <style>
+          footer img {
+          width: 100px; /* Adjust the size as needed */
+          height: auto;
+          margin-top: 10px;
+      }
+      </style> 
+      <p>Justine Palomares &copy; 2024</p> 
+  </footer>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+        $( function() {
+          $( ".controlgroup" ).controlgroup()
+          $( ".controlgroup-vertical" ).controlgroup({
+            "direction": "vertical"
+          });
+        } );
+    </script>
+</body>
+</html>

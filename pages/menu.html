@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+      /* Background image for the entire page */
+      body {
+            background-image: url('/Images/Wallpaper1.avif'); /* Replace with your image path */
+            background-size: cover; /* Make the image cover the entire page */
+            background-repeat: no-repeat; /* Prevent the image from repeating */
+            background-attachment: fixed; /* Keeps the image fixed when scrolling */
+            background-position: center; /* Center the background image */
+            color: #fff; /* Optional: Set text color to be more visible over the background */
+            
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for the header */
+            padding: 15px 20px;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            font-size: 36px; /* Adjust icon size */
+            color: #fff; /* Icon color */
+            margin-right: 10px; /* Space between icon and text */
+        }
+        .header-name {
+            font-size: 28px;
+            font-weight: 500;
+            margin: 0;
+        }
+        .ui-menu { width: 150px; }
+    </style>
+</head>
+<body>
+    <header>
+      <div class="header-container">
+        <span class="material-icons logo-icon">widgets</span>
+        <h1 class="header-name">WIDGETS</h1>
+    </div>
+    </header>
+    <section>
+        <nav>
+            <ul><li><a href="../index.html">Home</a></li></ul>
+            <ul><li><a href="accordion.html">Accordion</a></li></ul>
+            <ul><li><a href="autocomplete.html">Auto Complete</a></li></ul>
+            <ul><li><a href="button.html">Buttons</a></li></ul>
+            <ul><li><a href="checkbox.html">CheckBox Radio</a></li></ul>
+            <ul><li><a href="controlgroup.html">Control Group</a></li></ul>
+            <ul><li><a href="datepicker.html">Date</a></li></ul>
+            <ul><li><a href="dialog.html">Dialog</a></li></ul>
+            <ul><li><a href="menu.html" style="color: #fff;">Menu</a></li></ul>
+        </nav>
+        <article>
+            <h1>Menu</h1>
+            <ul id="menu">
+                <li class="ui-state-disabled"><div>Toys (n/a)</div></li>
+                <li><div>Books</div></li>
+                <li><div>Clothing</div></li>
+                <li><div>Electronics</div>
+                  <ul>
+                    <li class="ui-state-disabled"><div>Home Entertainment</div></li>
+                    <li><div>Car Hifi</div></li>
+                    <li><div>Utilities</div></li>
+                  </ul>
+                </li>
+                <li><div>Movies</div></li>
+                <li><div>Music</div>
+                  <ul>
+                    <li><div>Rock</div>
+                      <ul>
+                        <li><div>Alternative</div></li>
+                        <li><div>Classic</div></li>
+                      </ul>
+                    </li>
+                    <li><div>Jazz</div>
+                      <ul>
+                        <li><div>Freejazz</div></li>
+                        <li><div>Big Band</div></li>
+                        <li><div>Modern</div></li>
+                      </ul>
+                    </li>
+                    <li><div>Pop</div></li>
+                  </ul>
+                </li>
+                <li class="ui-state-disabled"><div>Specials (n/a)</div></li>
+              </ul>
+        </article>
+    </section>
+    <footer>
+      <img src="/Images/msc-footer-gate.png" alt="Footer Icon" style="width: 100px; height: auto;">
+      <style>
+          footer img {
+          width: 100px; /* Adjust the size as needed */
+          height: auto;
+          margin-top: 10px;
+      }
+      </style> 
+      <p>Justine Palomares &copy; 2024</p> 
+  </footer>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+        $( function() {
+          $( "#menu" ).menu();
+        } );
+    </script>
+</body>
+</html>

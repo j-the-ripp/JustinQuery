@@ -1,0 +1,69 @@
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
+    color: #ffffff;
+    text-align: left;
+    padding: 20px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F5F5F5; 
+}
+
+.container a {
+    background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.container a:hover {
+    color: #fff;
+    padding: 3px;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
+    float: left;
+    width: 20%;
+    height: 550px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul a {
+    display: block;
+    text-decoration: none;
+    color: white; 
+    font-size: 15px;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s, padding-left 0.3s;
+}
+
+nav ul a:hover {
+    background-color: #ffffff; /* Light blue background on hover */
+    color: #000000  ; /* White text color on hover */
+    padding-left: 25px; /* Adds padding to the left on hover */
+}
+
+article {
+    background-color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+    float: left;
+    color: #000000; 
+    width: 75%;
+    height: 550px;
+    padding-left: 5%;
+}
+
+footer {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
+    color: #ffffff;
+    padding: 10px; 
+    font-size: 15px;
+    border: solid 1px white;
+}
